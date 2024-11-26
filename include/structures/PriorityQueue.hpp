@@ -1,15 +1,22 @@
 #ifndef PQ_HPP
 #define PQ_HPP
 
+/*
+
+    PriorityQueue
+
+    Abstrakcyjna klasa bazowa do implementacji kolejek priorytetowych
+
+*/
+
 class PriorityQueue
 {
 
 public:
     
-    void insert(int val);
-    int delMax();
+    virtual void insert(int val);
+    virtual int delMax();
 
-    PriorityQueue(); 
     virtual ~PriorityQueue();
 
 }

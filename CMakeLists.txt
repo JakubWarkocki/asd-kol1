@@ -6,8 +6,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 target_include_directories(Asdy PUBLIC include)
 
-add_executable(AsdyTest 
-    src/main.cpp
-    src/structures/PriorityQueue.cpp
-    src/tests/BasicTester.cpp
-)
+file(GLOB_RECURSE SOURCE_FILES src/*.cpp)
+
+add_executable(PriorityQueueTesting ${SOURCE_FILES})
+
+g
