@@ -1,15 +1,16 @@
-#ifndef SORTED_LIST_HPP 
-#define SORTED_LIST_HPP 
+#ifndef SLIST_HPP 
+#define SLIST_HPP
 
-class SortedList : public PriorityQueue
+#include "structures/DataStruct.hpp"
+
+class SortedList : public DataStruct
 {
 
 public:
     
-    void insert(int val) override; // O(n)
+    void insert(int val, int key=0) override; // O(n)
     int delMax() override; // O(1)
 
-    SortedList(); 
     ~SortedList() override;
 
 }
