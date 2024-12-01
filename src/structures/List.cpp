@@ -1,6 +1,6 @@
 #include <structures/List.hpp>
 
-void List::insert(int val, int key){
+void List::insert(int val, int data){
 
     ListNode* new_node = new ListNode(val);
     ListNode** i = &this->head_;
