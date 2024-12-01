@@ -1,7 +1,6 @@
 #ifndef DS_HPP
 #define DS_HPP
 
-#define INFINITY 2147483648 
 #define NEGATIVE_INFINITY -2147483648 
 
 /*
@@ -19,13 +18,12 @@ class DataStruct
 
 public:
     
-    virtual void insert(int val, int key=0); // Parametr key tylko dla słowników
-    virtual int delMax(); // W przypadku pustej kolejki zwraca NEGATIVE_INFINTY
-    virtual int search(int val); // W przypadku nieznalezienia elementu zwraca NEGATIVE_INFINTY
-
-
-    virtual ~DataStruct();
-
-}
+    virtual void insert(int val, int data=0) = 0; // W przypadku słownika val jest kluczem a data ukrytym elementem
+    virtual int delMax() = 0; // W przypadku pustej kolejki zwraca NEGATIVE_INFINTY
+    virtual int search(int key) = 0; // W przypadku nieznalezienia elementu zwraca NEGATIVE_INFINTY
+    virtual void delElement(int key) = 0;
+    virtual ~DataStruct() {}
+    
+};
 
 #endif

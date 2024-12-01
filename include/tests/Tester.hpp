@@ -1,6 +1,8 @@
 #ifndef BASIC_TESTER_HPP
 #define BASIC_TESTER_HPP
 
+#include <string>
+
 class DataStruct;
 
 /*
@@ -15,22 +17,15 @@ class Tester
 {
 
 public: 
-    
-    enum Result {
-        OK,
-        LOGIC_ERROR,
-        INSERT_RUNTIME_ERROR,
-        DEL_MAX_RUNTIME_ERROR,
-        SEARCH_RUNTIME_ERROR
-    };
 
-    static Result testPriorityQueue(DataStruct& pq, bool verbose = false, std::string name="PriorityQueue");
+    static bool testPriorityQueue(DataStruct& pq, unsigned seed=2137, bool verbose = false, std::string name="PriorityQueue");
     
     /*
 
     testPriorityQueue:
 
     pq - pusta kolejka priotytetowa
+    seed - ziarno do liczb losowych w testach
     verbose - wypisywanie informacji na stdout
     name - wybrana nazwa struktury
 
@@ -41,13 +36,14 @@ public:
 
     */
 
-    static Result testDictionary(DataStruct& dc, bool verbose = false, std::string name="Dictionary");
+    static bool testDictionary(DataStruct& dc, unsigned seed=2137, bool verbose = false, std::string name="Dictionary");
     
     /*
 
     testDictionary:
 
     dc - pusty słownik
+    seed - ziarno do liczb losowych w testach
     verbose - wypisywanie informacji na stdout
     name - wybrana nazwa struktury
 
@@ -57,7 +53,7 @@ public:
 
     */
 
-   // TODO: testy dla specyficznych struktur
+   // TODO union
 
 };
 

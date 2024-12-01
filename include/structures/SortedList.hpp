@@ -13,6 +13,6 @@ public:
 
     ~SortedList() override;
 
-}
+};
 
 #endif
