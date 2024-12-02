@@ -2,6 +2,7 @@
 #include <structures/List.hpp>
 #include <structures/SortedList.hpp>
 #include <structures/Heap.hpp>
+#include <structures/Beap.hpp>
 #include <iostream>
 
 int main(){
@@ -43,4 +44,16 @@ int main(){
     
     Tester::testPriorityQueue(pq3, 2137, true, "HEAP");
 
+    std::cout << std::endl;
+
+    Beap pq4 = *(new Beap());
+    
+    for(int i =0; i<0; i++){
+        if(!Tester::testPriorityQueue(pq4, i)){
+            Tester::testPriorityQueue(pq4, i, true, "HEAP");
+            return 1;
+        }
+    }
+    
+    Tester::testPriorityQueue(pq4, 2137, true, "BEAP");
 }

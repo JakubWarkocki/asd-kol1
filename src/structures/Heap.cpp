@@ -1,6 +1,6 @@
 #include "structures/Heap.hpp"
 #include <algorithm>
-#include <iostream>
+
 int Heap::parent(int i){
     return i/2;
 }

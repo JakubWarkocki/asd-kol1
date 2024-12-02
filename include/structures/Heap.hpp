@@ -3,7 +3,6 @@
 
 #define MAX_HEAP_SIZE 4096
 
-#include <vector>
 #include <structures/DataStruct.hpp>
 
 class Heap : public DataStruct
