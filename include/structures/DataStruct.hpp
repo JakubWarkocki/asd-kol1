@@ -2,7 +2,8 @@
 #define DS_HPP
 
 #define NEGATIVE_INFINITY -2147483648 
-
+#define SENTINEL 2147483647
+ 
 /*
 
     DataStruct
