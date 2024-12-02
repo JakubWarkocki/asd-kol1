@@ -9,4 +9,5 @@ file(GLOB_RECURSE SOURCE_FILES src/*.cpp)
 
 add_executable(asd-kol1 ${SOURCE_FILES})
 
-target_include_directories(asd-kol1 PUBLIC include)
+target_include_directories(asd-kol1 PRIVATE include)
+target_compile_options(asd-kol1 PRIVATE -O2 -Wall -Wextra -Wpedantic)
